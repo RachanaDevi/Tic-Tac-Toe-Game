@@ -20,14 +20,13 @@ int flag=0;
 class person  
 {
 	protected:
-   // int chance;
+  
 	char input;
 	public:
-	person(/*int c,*/char i)
+	person(char i)
 	{
 		input=i;
-	//	chance=c; 
-		//chance of player is 1
+	
 		
 	}
 	char returnInput()
@@ -54,7 +53,7 @@ bool occupied()//CODE TO CHECK IF IT HAS RESULTED IN DRAW SO TRAVERSE ALL INDICE
 	cout<<"\nflag value="<<flag;
 	return true;
 	
-	//AFTER WRITING THIS CHANGE THE MAIN CODE A LITTLE BIT AS IT STILL SHOWS WHICH PLAYER WON
+	
 }
 bool gameEnded()
 {
@@ -125,7 +124,7 @@ void person::makeMove(int block)
 {
 	char block1=block+'0';
 	cout<<"VALUE OF BLOCK1="<<block1;
-	//cout<<endl<<"MOVE BLOCK's value'="<<*move[block]<<endl<<block+'0'<<" is it same?="<<(*move[block]==block)+'0';
+	
    if(*move[block]==block1)
    {
    	 *move[block]=returnInput();
@@ -161,7 +160,7 @@ int main()
 		p[i].makeMove(block);
 		if(gameEnded())
 		break;
-		i=i?0:1;
+		i=i?0:1; //if i==1 then changes value to 0 and vice versa
     
 	  
 
